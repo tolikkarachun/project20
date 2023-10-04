@@ -1,0 +1,90 @@
+.section-tearches {
+    margin-top: 240px;
+    margin-bottom: 240px;
+    @include mobile {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+}
+.swiper {
+    border-radius: 60px;
+    cursor: grab;
+}
+.section-teachers {
+    &__navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        top: -65px;
+        padding-right: 15px;
+    }
+    &__btn {
+        background: transparent;
+        cursor: pointer;
+    }
+    &__btn-prev:hover {
+        svg rect {
+            fill: var(--Primary-200);
+        }
+        svg path {
+            stroke: #EFF0F6;
+        }
+    }
+    &__text {
+        font: var(--Subtitle_1);
+        color: var(--Outline-dark);
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        font: var(--H2);
+        color: var(--Text-Primary);
+        @include mobile {
+            max-width: 250px;
+            font-size: 28px;
+        }
+    }
+
+    &__item {
+        padding: 0 25px;
+    }
+
+    &__foto {
+        max-width: 370px;
+        max-height: 417px;
+        margin-bottom: 40px;
+    }
+
+    &__foto-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__name {
+        font: var(--H5);
+        color: var(--Text-Primary);
+    }
+
+    &__about {
+        display: inline-flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    &__about-img {
+        width: 34px;
+        height: 34px;
+        object-fit: cover;
+
+    }
+
+    &__about-role {
+        margin-top: 16px;
+    }
+}
+
+.swiper-pagination {
+    display: none;
+}

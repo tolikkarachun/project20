@@ -1,0 +1,86 @@
+.section-say {
+  &__desc {
+    font: var(--Subtitle_1);
+    color: var(--Outline-dark);
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    font: var(--H2);
+    color: var(--Text-Primary);
+    margin-bottom: 59px;
+
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 143px;
+    padding: 0 20px;
+    @include tablet {
+        flex-direction: column;
+        gap: 50px;
+    }
+  }
+
+  &__item-image {
+    max-width: 450px;
+    height: 500px;
+  }
+
+  &__item-img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+    @include mobile {
+        object-fit: contain;
+    }
+
+    
+  }
+
+  &__info-name {
+    font: var(--H3);
+    color: var(--Text-Primary);
+  }
+
+  &__info-country {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__county-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  &__country-role {
+    font: var(--Body_text_18);
+    color: var(--Outline-dark);
+    padding-top: 10px;
+  }
+
+  &__info-text {
+    max-width: 576px;
+    font: var(--H4);
+    color: var(--Text-Primary);
+    margin-bottom: 51px;
+  }
+}
+.swiper-pagination__gallary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gallary {
+  position: relative;
+  bottom: 50px;
+  @include tablet {
+    bottom: 0;
+  }
+}

@@ -1,0 +1,123 @@
+.section-common {
+  overflow: hidden;
+  margin-top: 107px;
+  margin-bottom: 240px;
+  @include mobile {
+    margin-bottom: 120px;
+  }
+  &__more {
+    font: var(--Subtitle_1);
+    color: var(--Outline-dark);
+  }
+
+  &__title {
+    max-width: 455px;
+    font: var(--H2);
+    color: var(--Text-Primary);
+    margin-bottom: 43px;
+    white-space: nowrap;
+    @include tablet-small {
+      font-size: 24px;
+    }
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    @include desktop-small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__block-item {
+    border-radius: 40px;
+    border: 1px solid rgba(176, 176, 192, 0.3);
+    padding: 36px 56px;
+    background: var(--c-text-white);
+    display: flex;
+    align-items: flex-start;
+    gap: 41px;
+    position: relative;
+    margin-bottom: 20px;
+    @include desktop-small {
+      max-width: 610px;
+    }
+    @include tablet-small {
+      padding: 20px 20px;
+    }
+  }
+  &__block-item.active {
+    transition: var(--transition);
+    background: var(--Primary-200);
+    @include tablet-small {
+      padding: 20px 20px;
+    }
+  }
+  &__block-info {
+    padding-right: 20px;
+  }
+  &__block-image {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    right: 3%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  &__block-item.active &__block-image {
+    right: 0;
+    transform: translateX(-100%);
+    position: absolute;
+  }
+  &__block-title {
+    max-width: 449px;
+    font: var(--feature-settings);
+    color: var(--Text-Primary);
+    white-space: nowrap;
+    margin-bottom: 10px;
+    margin-right: 40px;
+
+    @include tablet-small {
+      font-size: 16px;
+    }
+    @include mobile {
+      white-space: wrap;
+      margin-right: 20px;
+    }
+  }
+  &__block-text {
+    max-width: 492px;
+    font: var(--Body_text_18);
+    color: var(--Background---White);
+    display: none;
+  }
+  &__block-item.active &__block-title {
+    color: var(--Background---White);
+  }
+  &__block-text.active {
+    display: block;
+    @include tablet-small {
+      font-size: 14px;
+    }
+  }
+  //&__block-item.active &__block-image img[alt="plus"] {
+  //  display: inline;
+  //}
+  //&__block-item.active &__block-image img[alt="minus"] {
+  // display: none;
+  //}
+}
+.block-image {
+  &__plus {
+    width: 32px;
+    height: 32px;
+    display: none;
+  }
+  &__minus {
+    width: 32px;
+    height: 32px;
+    display: none;
+  }
+}

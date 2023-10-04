@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="msapplication-TileColor" content="#fff5f1">
+	<meta name="theme-color" content="#fff5f1">
+	<title>Lingua</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#03a71a">
+	<link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+	<section class="welcome">
+		@@include('blocks/header.html')
+		@@include('blocks/welcome-content.html')
+	</section>
+	@@include('blocks/values.html')
+	@@include('sections/section-teachers.html')
+	@@include('sections/section-say.html')
+	@@include('sections/section-common.html')
+	@@include('sections/section-free.html')
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<script>
+		function navToggle() {
+			document.getElementById("headerUl").classList.toggle("_active");
+			document.getElementById("headerBackdrop").classList.toggle("_active");
+		}
+		document.addEventListener("DOMContentLoaded", function () {
+			const plusIcons = document.querySelectorAll('img[alt="plus"]');
+			const minusIcons = document.querySelectorAll('img[alt="minus"]');
+			const answerParagraphs = document.querySelectorAll('.section-common__block-text');
+
+			function openSection(index) {
+				answerParagraphs[index].style.display = "block";
+				plusIcons[index].style.display = "none";
+				minusIcons[index].style.display = "inline";
+				document.querySelectorAll(".section-common__block-item")[index].classList.add("active");
+			}
+
+			// Функція закриття всіх розділів, крім вибраного
+			function closeOtherSections(clickedIndex) {
+				answerParagraphs.forEach((paragraph, index) => {
+					if (index !== clickedIndex) {
+						paragraph.style.display = 'none';
+						plusIcons[index].style.display = 'inline';
+						minusIcons[index].style.display = 'none';
+						document.querySelectorAll('.section-common__block-item')[index].classList.remove('active');
+					}
+				});
+			}
+			const lastSectionIndex = answerParagraphs.length - 1;
+			openSection(lastSectionIndex);
+			// Додати події клацання до значків плюса
+			plusIcons.forEach((plusIcon, index) => {
+				plusIcon.addEventListener('click', () => {
+					// Закрити інші розділи
+					closeOtherSections(index);
+					// Увімкнути видимість абзацу відповіді
+					answerParagraphs[index].style.display = 'block';
+					// Перемикання значків плюса та мінуса
+					plusIcon.style.display = 'none';
+					minusIcons[index].style.display = 'inline';
+					// Додати клас «активний» до клацнутого елемента
+					plusIcon.closest('.section-common__block-item').classList.add('active');
+				});
+			});
+
+			// Додання подій клацання до значків мінуса
+			minusIcons.forEach((minusIcon, index) => {
+				minusIcon.addEventListener('click', () => {
+					// Увімкнути видимість абзацу відповіді
+					answerParagraphs[index].style.display = 'none';
+
+					plusIcons[index].style.display = 'inline';
+					minusIcon.style.display = 'none';
+					// Видалення «активний» клас із клацнутого елемента
+					minusIcon.closest('.section-common__block-item').classList.remove('active');
+				});
+			});
+		});
+
+		//SWIPER
+
+		let swiper = new Swiper(".mySwiper", {
+				slidesPerView: 3,
+				spaceBetween: 10,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".section-teachers__btn-next",
+					prevEl: ".section-teachers__btn-prev",
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1,
+					},
+					576: {
+						slidesPerView: 1,
+						spaceBetween: 10,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 10,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+				},
+			});
+
+			let gallary = new Swiper(".myGallary", {
+					pagination: {
+						el: ".swiper-pagination__gallary",
+				},
+			});
+
+			
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="msapplication-TileColor" content="#fff5f1">
+	<meta name="theme-color" content="#fff5f1">
+	<title>Lingua</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#03a71a">
+	<link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+	<section class="welcome">
+		<header class="header container">
+	<a href="/" class="header__logo"><img src="./img/logo.svg" alt="Lingua"></a>
+	<div class="header__nav">
+		<div class="header__backdrop" id="headerBackdrop" onclick="navToggle()"></div>
+		<ul class="header__ul" id="headerUl">
+			<li class="header__li"><a class="header__a" href="/">Courses</a></li>
+			<li class="header__li"><a class="header__a" href="/">About us</a></li>
+			<li class="header__li"><a class="header__a" href="/">Teachers</a></li>
+			<li class="header__li"><a class="header__a" href="/">Pricing</a></li>
+			<li class="header__li"><a class="header__a" href="/">Careers</a></li>
+			<li class="header__li"><a class="header__a" href="/">Blog</a></li>
+			<span class="material-icons icon-close" onclick="navToggle()">close</span>
+		</ul>
+
+		<span class="material-icons icon-menu" onclick="navToggle()">menu</span>
+	</div>
+	<ul class="header__btn">
+		<li>
+			<a href="/" class="btn _primary">Get started</a>
+		</li>
+	</ul>
+</header>
+
+		<div class="container welcome-content">
+    <div class="welcome__info" data-aos="fade-down-right">
+        <h1 class="welcome__title">A <span>unique</span> approach to learning foreign languages online</h1>
+        <p class="welcome__desc">Learn at your own pace, with lifetime access on mobile and desktop</p>
+        <div class="welcome__btn">
+            <a href="/" class="btn _secondary">Get started</a>
+        </div>
+    </div>
+    <div class="welcome__img" data-aos="fade-down-left">
+        <img src="./img/welcome.svg" alt="Lingua">
+    </div>
+</div>
+
+	</section>
+	<section class="container values">
+    <p class="values__why">WHY CHOOSE US</p>
+    <h2 class="values__title">Our values </h2>
+    <div class="values-list" data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
+        <div class="values-item">
+            <div class="values-item__img">
+                <img src="./img/value1.png" alt="Speaking clubs">
+            </div>
+            <h3 class="values-item__title">Speaking clubs</h3>
+            <p class="values-item__desc">In our school you will practice your speaking skills and just get a lot of positive emotions!</p>
+        </div>
+        <div class="values-item">
+            <div class="values-item__img">
+                <img src="./img/value2.png" alt="Quality control">
+            </div>
+            <h3 class="values-item__title">Quality control</h3>
+            <p class="values-item__desc">A huge work has been done with the teachers and their work has been monitored thoroughly. </p>
+        </div>
+        <div class="values-item">
+            <div class="values-item__img">
+                <img src="./img/value3.png" alt="Progress analysis">
+            </div>
+            <h3 class="values-item__title">Progress analysis</h3>
+            <p class="values-item__desc">The CEF of Reference has been used at our school. It allows to control our students’ success in studying.</p>
+        </div>
+    </div>
+</section>
+
+	<section class="container section-tearches">
+    <p class="section-teachers__text">key persons</p>
+    <h2 class="section-teachers__title">Meet our teachers</h2>
+    <div class="section-teachers__navigation">
+        <button class="section-teachers__btn section-teachers__btn-prev" id="prevButton">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.1108 21L22.8898 28.2211L30.1108 35.4421" stroke="#E8E8F6" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <rect x="-0.5" y="0.5" width="55" height="55" rx="27.5" transform="matrix(-1 0 0 1 55 0)" stroke="#E8E8F6" />
+            </svg>
+        </button>
+        <button class="section-teachers__btn section-teachers__btn-next" id="nextButton">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="56" height="56" rx="28" fill="#524FD5" />
+                <path d="M25.8892 21L33.1102 28.2211L25.8892 35.4421" stroke="#EFF0F6" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="section-teachers__item">
+                        <div class="section-teachers__foto">
+                            <img class="section-teachers__foto-img" src="./img/teachers/teachers-1.jpg" alt="teachers">
+                        </div>
+                        <h4 class="section-teachers__name">Christian Howard</h4>
+                        <div class="section-teachers__about">
+                            <img class="section-teachers__about-img" src="./img/teachers/flag-1.svg" alt="flag">
+                            <p class="section-teachers__about-role">Italian teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="section-teachers__item">
+                        <div class="section-teachers__foto">
+                            <img class="section-teachers__foto-img" src="./img/teachers/teachers-2.jpg" alt="teachers">
+                        </div>
+                        <h4 class="section-teachers__name">Sandra Wilson</h4>
+                        <div class="section-teachers__about">
+                            <img class="section-teachers__about-img" src="./img/teachers/flag-2.svg" alt="flag">
+                            <p class="section-teachers__about-role">Spanish teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="section-teachers__item">
+                        <div class="section-teachers__foto">
+                            <img class="section-teachers__foto-img" src="./img/teachers/teachers-3.jpg" alt="teachers">
+                        </div>
+                        <h4 class="section-teachers__name">Jimmy Cooper</h4>
+                        <div class="section-teachers__about">
+                            <img class="section-teachers__about-img" src="./img/teachers/flag-3.svg" alt="flag">
+                            <p class="section-teachers__about-role">English teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="section-teachers__item">
+                        <div class="section-teachers__foto">
+                            <img class="section-teachers__foto-img" src="./img/teachers/teachers-1.jpg" alt="teachers">
+                        </div>
+                        <h4 class="section-teachers__name">Christian Howard</h4>
+                        <div class="section-teachers__about">
+                            <img class="section-teachers__about-img" src="./img/teachers/flag-1.svg" alt="flag">
+                            <p class="section-teachers__about-role">Italian teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="section-teachers__item">
+                        <div class="section-teachers__foto">
+                            <img class="section-teachers__foto-img" src="./img/teachers/teachers-2.jpg" alt="teachers">
+                        </div>
+                        <h4 class="section-teachers__name">Sandra Wilson</h4>
+                        <div class="section-teachers__about">
+                            <img class="section-teachers__about-img" src="./img/teachers/flag-2.svg" alt="flag">
+                            <p class="section-teachers__about-role">Spanish teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="section-teachers__item">
+                        <div class="section-teachers__foto">
+                            <img class="section-teachers__foto-img" src="./img/teachers/teachers-3.jpg" alt="teachers">
+                        </div>
+                        <h4 class="section-teachers__name">Jimmy Cooper</h4>
+                        <div class="section-teachers__about">
+                            <img class="section-teachers__about-img" src="./img/teachers/flag-3.svg" alt="flag">
+                            <p class="section-teachers__about-role">English teacher</p>
+                        </div>
+                    </div>
+                </div>  
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+	<section class="container section-say">
+    <p class="section-say__desc">TOP STUDIYING</p>
+    <h2 class="section-say__title">Our students say</h2>
+    <div class="swiper myGallary">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="section-say__item">
+                    <div class="section-say__item-image">
+                        <img src="./img/teachers/teachers-4.jpg" alt="photo" class="section-say__item-img">
+                    </div>
+                    <div class="section-say__item-info">
+                        <h5 class="section-say__info-name">Martin Watson</h5>
+                        <div class="section-say__info-country">
+                            <img src="./img/teachers/flag-2.svg" alt="flag" class="section-say__county-img">
+                            <p class="section-say__country-role">B2 course student</p>
+                        </div>
+                        <p class="section-say__info-text">There is no way I could have made the same progress learning Spanish without using Lingua. The best part is now learning
+                        Spanish has become one of my biggest hobbies.
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section-say__item">
+                    <div class="section-say__item-image">
+                        <img src="./img/teachers/teachers-4.jpg" alt="photo" class="section-say__item-img">
+                    </div>  
+                    <div class="section-say__item-info">
+                        <h5 class="section-say__info-name">Martin Watson</h5>
+                        <div class="section-say__info-country">
+                            <img src="./img/teachers/flag-2.svg" alt="flag" class="section-say__county-img">
+                            <p class="section-say__country-role">B2 course student</p>
+                        </div>
+                        <p class="section-say__info-text">There is no way I could have made the same progress learning Spanish without
+                            using Lingua. The best part is now learning
+                            Spanish has become one of my biggest hobbies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section-say__item">
+                    <div class="section-say__item-image">
+                        <img src="./img/teachers/teachers-4.jpg" alt="photo" class="section-say__item-img">
+                    </div>
+                    <div class="section-say__item-info">
+                        <h5 class="section-say__info-name">Martin Watson</h5>
+                        <div class="section-say__info-country">
+                            <img src="./img/teachers/flag-2.svg" alt="flag" class="section-say__county-img">
+                            <p class="section-say__country-role">B2 course student</p>
+                        </div>
+                        <p class="section-say__info-text">There is no way I could have made the same progress learning Spanish without
+                            using Lingua. The best part is now learning
+                            Spanish has become one of my biggest hobbies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section-say__item">
+                    <div class="section-say__item-image">
+                        <img src="./img/teachers/teachers-4.jpg" alt="photo" class="section-say__item-img">
+                    </div>
+                    <div class="section-say__item-info">
+                        <h5 class="section-say__info-name">Martin Watson</h5>
+                        <div class="section-say__info-country">
+                            <img src="./img/teachers/flag-2.svg" alt="flag" class="section-say__county-img">
+                            <p class="section-say__country-role">B2 course student</p>
+                        </div>
+                        <p class="section-say__info-text">There is no way I could have made the same progress learning Spanish without
+                            using Lingua. The best part is now learning
+                            Spanish has become one of my biggest hobbies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section-say__item">
+                    <div class="section-say__item-image">
+                        <img src="./img/teachers/teachers-4.jpg" alt="photo" class="section-say__item-img">
+                    </div>
+                    <div class="section-say__item-info">
+                        <h5 class="section-say__info-name">Martin Watson</h5>
+                        <div class="section-say__info-country">
+                            <img src="./img/teachers/flag-2.svg" alt="flag" class="section-say__county-img">
+                            <p class="section-say__country-role">B2 course student</p>
+                        </div>
+                        <p class="section-say__info-text">There is no way I could have made the same progress learning Spanish without
+                            using Lingua. The best part is now learning
+                            Spanish has become one of my biggest hobbies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section-say__item">
+                    <div class="section-say__item-image">
+                        <img src="./img/teachers/teachers-4.jpg" alt="photo" class="section-say__item-img">
+                    </div>
+                    <div class="section-say__item-info">
+                        <h5 class="section-say__info-name">Martin Watson</h5>
+                        <div class="section-say__info-country">
+                            <img src="./img/teachers/flag-2.svg" alt="flag" class="section-say__county-img">
+                            <p class="section-say__country-role">B2 course student</p>
+                        </div>
+                        <p class="section-say__info-text">There is no way I could have made the same progress learning Spanish without
+                            using Lingua. The best part is now learning
+                            Spanish has become one of my biggest hobbies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section-say__item">
+                    <div class="section-say__item-image">
+                        <img src="./img/teachers/teachers-4.jpg" alt="photo" class="section-say__item-img">
+                    </div>
+                    <div class="section-say__item-info">
+                        <h5 class="section-say__info-name">Martin Watson</h5>
+                        <div class="section-say__info-country">
+                            <img src="./img/teachers/flag-2.svg" alt="flag" class="section-say__county-img">
+                            <p class="section-say__country-role">B2 course student</p>
+                        </div>
+                        <p class="section-say__info-text">There is no way I could have made the same progress learning Spanish without
+                            using Lingua. The best part is now learning
+                            Spanish has become one of my biggest hobbies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section-say__item">
+                   <div class="section-say__item-image">
+                        <img src="./img/teachers/teachers-4.jpg" alt="photo" class="section-say__item-img">
+                   </div>
+                    <div class="section-say__item-info">
+                        <h5 class="section-say__info-name">Martin Watson</h5>
+                        <div class="section-say__info-country">
+                            <img src="./img/teachers/flag-2.svg" alt="flag" class="section-say__county-img">
+                            <p class="section-say__country-role">B2 course student</p>
+                        </div>
+                        <p class="section-say__info-text">There is no way I could have made the same progress learning Spanish without
+                            using Lingua. The best part is now learning
+                            Spanish has become one of my biggest hobbies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination__gallary" id="gallary"></div>
+    </div>
+</section>
+	<section class="container section-common">
+    <p class="section-common__more">more info</p>
+    <h2 class="section-common__title">Common questions</h2>
+    <div class="section-common__block">
+        <div class="section-common__block-top">
+            <div class="section-common__block-item">
+                <div class="section-common__block-info">
+                    <h5 class="section-common__block-title">How can I know my level of knowledge?</h5>
+                    <p class="section-common__block-text">By the end of the trial lesson, you will be able to determine for yourself
+                        whether
+                        this kind of online lesson is right
+                        for you or not. In our experience, most students appreciate the benefits of online education and decide to
+                        study
+                        online.
+                    </p>
+                </div>
+                <div class="section-common__block-image">
+                    <img src="./img/common/plus.svg" alt="plus">
+                    <img class="block-image__minus" src="./img/common/minus.svg" alt="minus">
+                </div>
+            </div>
+            <div class="section-common__block-item">
+                <div class="section-common__block-info">
+                    <h5 class="section-common__block-title">Do I need to buy materials for lessons?</h5>
+                    <p class="section-common__block-text">By the end of the trial lesson, you will be able to determine for yourself
+                        whether
+                        this kind of online lesson is right
+                        for you or not. In our experience, most students appreciate the benefits of online education and decide to
+                        study
+                        online.
+                    </p>
+                </div>
+                <div class="section-common__block-image">
+                    <img src="./img/common/plus.svg" alt="plus">
+                    <img class="block-image__minus" src="./img/common/minus.svg" alt="minus">
+                </div>
+            </div>
+            <div class="section-common__block-item">
+                <div class="section-common__block-info">
+                    <h5 class="section-common__block-title">Can I do it individually or only in a group?</h5>
+                    <p class="section-common__block-text">By the end of the trial lesson, you will be able to determine for yourself
+                        whether
+                        this kind of online lesson is right
+                        for you or not. In our experience, most students appreciate the benefits of online education and decide to
+                        study
+                        online.
+                    </p>
+                </div>
+                <div class="section-common__block-image">
+                    <img src="./img/common/plus.svg" alt="plus">
+                    <img class="block-image__minus" src="./img/common/minus.svg" alt="minus">
+                </div>
+            </div>
+        </div>
+        <div class="section-common__block-bottom">
+            <div class="section-common__block-item">
+            <div class="section-common__block-info">
+                <h5 class="section-common__block-title">Are you adjusting to the student's schedule?</h5>
+                <p class="section-common__block-text">By the end of the trial lesson, you will be able to determine for yourself
+                    whether
+                    this kind of online lesson is right
+                    for you or not. In our experience, most students appreciate the benefits of online education and decide to study
+                    online.
+                </p>
+            </div>
+            <div class="section-common__block-image">
+                <img src="./img/common/plus.svg" alt="plus">
+                <img class="block-image__minus" src="./img/common/minus.svg" alt="minus">
+            </div>
+            </div>
+            <div class="section-common__block-item">
+                <div class="section-common__block-info">
+                    <h5 class="section-common__block-title">What is the maximum group size?</h5>
+                    <p class="section-common__block-text">By the end of the trial lesson, you will be able to determine for yourself
+                        whether
+                        this kind of online lesson is right
+                        for you or not. In our experience, most students appreciate the benefits of online education and decide to
+                        study
+                        online.
+                    </p>
+                </div>
+                <div class="section-common__block-image">
+                    <img src="./img/common/plus.svg" alt="plus">
+                    <img class="block-image__minus" src="./img/common/minus.svg" alt="minus">
+                </div>
+            </div>
+            <div class="section-common__block-item">
+                <div class="section-common__block-info">
+                    <h5 class="section-common__block-title">How the first lesson with teacher will be?</h5>
+                    <p class="section-common__block-text">By the end of the trial lesson, you will be able to determine for yourself
+                        whether
+                        this kind of online lesson is right
+                        for you or not. In our experience, most students appreciate the benefits of online education and decide to
+                        study
+                        online.
+                    </p>
+                </div>
+                <div class="section-common__block-image">
+                    <img class="block-image__plus" src="./img/common/plus.svg" alt="plus">
+                    <img class="block-image__minus" src="./img/common/minus.svg" alt="minus">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+	<section class="container section-free">
+    <h2 class="section-free__title">Get a free trial lesson today</h2>
+    <p class="section-free__desc">Start fulfilling your language dreams with our school</p>
+    <label class="section-free__lable"  style="display: flex; justify-content: center; align-items: center;">
+        <input type="text" class="section-free__input" placeholder="Enter your email">
+        <a href="/" class="section-free__btn">Send</a>
+    </label>
+</section>
+	<footer class="container footer">
+	<div class="footer-info">
+		<a href="/" class="footer-info__logo">
+			<img src="./img/footer-logo.svg" alt="Lingua">
+		</a>
+		<a href="/" class="footer-info__address">20 Osgood Rd, Milford, NH 03055, USA</a>
+		<a href="/" class="footer-info__number">+1283871239190213021</a>
+	</div>
+	<div class="footer-links">
+		<div class="footer-links__column">
+			<div class="footer-links__header">Company</div>
+			<a href="/" class="footer-links__link">Careers</a>
+			<a href="/" class="footer-links__link">Teachers</a>
+			<a href="/" class="footer-links__link">Support</a>
+			<a href="/" class="footer-links__link">Contact</a>
+		</div>
+		<div class="footer-links__column">
+			<div class="footer-links__header">Product</div>
+			<a href="/" class="footer-links__link">Courses</a>
+			<a href="/" class="footer-links__link">Pricing</a>
+			<a href="/" class="footer-links__link">Blog</a>
+		</div>
+		<div class="footer-links__column">
+			<div class="footer-links__header">Legal</div>
+			<a href="/" class="footer-links__link">Terms & Conditions</a>
+			<a href="/" class="footer-links__link">Privacy policy</a>
+		</div>
+	</div>
+	<div class="footer-socials">
+		<a href="/" class="footer-socials__link"><img src="./img/facebook.svg" alt="Facebook"></a>
+		<a href="/" class="footer-socials__link"><img src="./img/twitter.svg" alt="Twitter"></a>
+		<a href="/" class="footer-socials__link"><img src="./img/instagram.svg" alt="Instagram"></a>
+	</div>
+</footer>
+
+	<script src="./js/index.bundle.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+	<script>
+		function navToggle() {
+			document.getElementById("headerUl").classList.toggle("_active");
+			document.getElementById("headerBackdrop").classList.toggle("_active");
+		}
+		document.addEventListener("DOMContentLoaded", function () {
+			const plusIcons = document.querySelectorAll('img[alt="plus"]');
+			const minusIcons = document.querySelectorAll('img[alt="minus"]');
+			const answerParagraphs = document.querySelectorAll('.section-common__block-text');
+
+			function openSection(index) {
+				answerParagraphs[index].style.display = "block";
+				plusIcons[index].style.display = "none";
+				minusIcons[index].style.display = "inline";
+				document.querySelectorAll(".section-common__block-item")[index].classList.add("active");
+			}
+
+			// Функція закриття всіх розділів, крім вибраного
+			function closeOtherSections(clickedIndex) {
+				answerParagraphs.forEach((paragraph, index) => {
+					if (index !== clickedIndex) {
+						paragraph.style.display = 'none';
+						plusIcons[index].style.display = 'inline';
+						minusIcons[index].style.display = 'none';
+						document.querySelectorAll('.section-common__block-item')[index].classList.remove('active');
+					}
+				});
+			}
+			const lastSectionIndex = answerParagraphs.length - 1;
+			openSection(lastSectionIndex);
+			// Додати події клацання до значків плюса
+			plusIcons.forEach((plusIcon, index) => {
+				plusIcon.addEventListener('click', () => {
+					// Закрити інші розділи
+					closeOtherSections(index);
+					// Увімкнути видимість абзацу відповіді
+					answerParagraphs[index].style.display = 'block';
+					// Перемикання значків плюса та мінуса
+					plusIcon.style.display = 'none';
+					minusIcons[index].style.display = 'inline';
+					// Додати клас «активний» до клацнутого елемента
+					plusIcon.closest('.section-common__block-item').classList.add('active');
+				});
+			});
+
+			// Додання подій клацання до значків мінуса
+			minusIcons.forEach((minusIcon, index) => {
+				minusIcon.addEventListener('click', () => {
+					// Увімкнути видимість абзацу відповіді
+					answerParagraphs[index].style.display = 'none';
+
+					plusIcons[index].style.display = 'inline';
+					minusIcon.style.display = 'none';
+					// Видалення «активний» клас із клацнутого елемента
+					minusIcon.closest('.section-common__block-item').classList.remove('active');
+				});
+			});
+		});
+
+		//SWIPER
+
+		let swiper = new Swiper(".mySwiper", {
+				slidesPerView: 3,
+				spaceBetween: 10,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: ".section-teachers__btn-next",
+					prevEl: ".section-teachers__btn-prev",
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1,
+					},
+					576: {
+						slidesPerView: 1,
+						spaceBetween: 10,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 10,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+				},
+			});
+
+			let gallary = new Swiper(".myGallary", {
+					pagination: {
+						el: ".swiper-pagination__gallary",
+				},
+			});
+
+			
+	</script>
+</body>
+
+</html>

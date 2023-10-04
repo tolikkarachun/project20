@@ -1,0 +1,44 @@
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
+$mobile-sm: 390px;
+
+:root {
+  --ff: "Axiforma", sans-serif;
+  --transition: 0.2s all ease-in-out;
+
+  --c-primary: #0b8fed;
+  --c-text-white: #fff;
+  --c-border: #eee;
+
+  --Secondary: #fff5f1;
+  --Body-text: #666680;
+  --Body_text_14: 300 14px/24px var(--ff);
+  --Body_text_18: 300 18px/190% var(--ff);
+  --Background---White: #fff;
+  --Background---Dark: #f8fafe;
+  --Button: 700 14px/28px var(--ff);
+  --H1: 300 56px/126% var(--ff);
+  --H2: 300 48px/130% var(--ff);
+  --H5: 500 24px/150% var(--ff);
+  --Subtitle_1: 700 18px/190% var(--ff);
+  --Subtitle_2: 600 16px/150% var(--ff);
+  --Caption: 300 12px/200% var(--ff);
+  --feature-settings: 500 20px/190% var(--ff);
+  --H3: 700 32px/201% var(--ff);
+  --H4: 300 26px/180% var(--ff);
+
+
+
+  --Primary-200: #524fd5;
+  --Text-Primary: #181b32;
+  --Outline-dark: #B0B0C0;
+  --background-input: #f8fafe;
+
+  @media screen and (max-width: 992px) {
+    --H1: 300 32px/126% var(--ff);
+    --Body_text_18: 300 14px/190% var(--ff);
+  }
+}
